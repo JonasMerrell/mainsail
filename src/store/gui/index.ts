@@ -158,6 +158,10 @@ export const getDefaultState = (): GuiState => {
         navigation: {
             entries: [],
         },
+        filamentHub: {
+            url: '',
+            token: '',
+        },
         uiSettings: {
             mode: defaultMode,
             theme: defaultTheme,
