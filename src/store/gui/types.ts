@@ -84,6 +84,11 @@ export interface GuiState {
     }
     macros?: GuiMacrosState
     navigation: GuiNavigationState
+    // fork: self-hosted filament hub (JonasMerrell/filament-hub)
+    filamentHub: {
+        url: string
+        token: string
+    }
     notifications?: GuiNotificationState
     presets?: GuiPresetsState
     remoteprinters?: GuiRemoteprintersState

@@ -21,7 +21,7 @@ export default function buildReleaseInfo(): PluginOption {
                 await releaseInfoFile.writeFile(
                     JSON.stringify({
                         project_name: 'mainsail',
-                        project_owner: 'mainsail-crew',
+                        project_owner: process.env.MAINSAIL_RELEASE_OWNER ?? 'JonasMerrell',
                         version: `v${version}`,
                     })
                 )

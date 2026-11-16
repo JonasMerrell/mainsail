@@ -18,6 +18,7 @@ import {
     mdiHistory,
     mdiTimelapse,
     mdiWrench,
+    mdiAlbum,
 } from '@mdi/js'
 
 const routes: AppRoute[] = [
@@ -116,6 +117,17 @@ const routes: AppRoute[] = [
         showInNavi: true,
         moonrakerComponent: 'timelapse',
         position: 80,
+    },
+    {
+        // fork: filament inventory backed by the self-hosted filament hub
+        name: 'filaments',
+        title: 'Filaments',
+        path: '/filaments',
+        icon: mdiAlbum,
+        component: () => import('../pages/Filaments.vue'),
+        alwaysShow: true,
+        showInNavi: true,
+        position: 85,
     },
     {
         name: 'machine',

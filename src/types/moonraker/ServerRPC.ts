@@ -27,4 +27,28 @@ export interface ServerRPC {
         /** The connection's unique identifier */
         connection_id: number
     }>
+
+    /**
+     * Read an item (or a whole namespace when key is omitted) from Moonraker's database.
+     * @see https://moonraker.readthedocs.io/en/latest/external_api/database/
+     */
+    'server.database.get_item': (params: { namespace: string; key?: string }) => Promise<{
+        namespace: string
+        key: string | null
+        value: unknown
+    }>
+
+    /** Store an item in Moonraker's database. */
+    'server.database.post_item': (params: { namespace: string; key: string; value: unknown }) => Promise<{
+        namespace: string
+        key: string
+        value: unknown
+    }>
+
+    /** Delete an item from Moonraker's database. */
+    'server.database.delete_item': (params: { namespace: string; key: string }) => Promise<{
+        namespace: string
+        key: string
+        value: unknown
+    }>
 }
