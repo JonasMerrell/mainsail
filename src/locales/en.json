@@ -1102,6 +1102,7 @@
     "Router": {
         "Console": "Console",
         "Dashboard": "Dashboard",
+        "Filaments": "Filaments",
         "G-Code Files": "G-Code Files",
         "G-Code Viewer": "G-Code Viewer",
         "Heightmap": "Heightmap",
